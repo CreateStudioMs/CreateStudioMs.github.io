@@ -1,0 +1,135 @@
+$color-second: #EA1C26;
+@mixin main-button {
+	& button{
+		background: repeating-radial-gradient(at 100% 100%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 0.1px, transparent 1px, transparent 100%) #EA1C26;
+		background-size: 3px 3px;
+	}
+
+	& button:hover {
+    	background-color: #f3797f;
+	}
+}
+
+@mixin main-title {
+	& h2 {
+	    &::before {	    
+	    	background-color: $color-second;
+	    }
+	}
+}
+
+@mixin chevron {
+	& .slick-prev::before,
+	& .slick-next::before {
+	    background: $color-second;
+	}
+}
+
+.base-tool {
+	z-index: -2;
+}
+
+.items-ul ul li {
+	max-width: 270px;
+}
+
+.line {
+	margin-top: 60px;
+	width: 400px;
+}
+.dotted-2 {
+	left: 112px;
+}
+
+.dotted-4 {
+	left: 319px;
+}
+
+.teachers h2 {
+	margin: 0 0 35px;
+}
+
+.backCall {
+	@include main-button;
+	& button::before {
+		content: url(../img/headphones_red.png);
+	}
+}
+
+.rectang {
+	border: 20px solid $color-second;
+}
+
+.fancybox-button {
+	background-color: #ff0000;
+}
+
+.sew__left {
+    border-left: 28px solid $color-second;
+    border-right: 28px solid $color-second;
+    border-bottom: 28px solid $color-second;
+}
+
+.desc-teacher {
+    border: 1px dashed $color-second;
+}
+
+.slide {
+    border-left: 7px solid $color-second;
+}
+
+.slide-small.slick-current .slide-inner img{
+    border: 1px solid $color-second;
+}
+
+.reviews,
+.teachers,
+.quetions {
+    @include main-title;
+}
+
+.slick-reviews-small,
+.slick-reviews {
+	@include chevron;
+}
+
+.quetions,
+.sew,
+.inner__header-form input,
+.inner__header-form,
+.inner__header-form-fancybox {
+	@include main-button;
+}
+
+.quetions__items a{
+   	border-bottom: 1px solid $color-second;
+}
+
+.box {
+    border: 7px solid $color-second;
+}
+
+.current-item,
+.last-quetions,
+.text-call::before,
+.quetion-mark,
+.quetions__items a,
+.desc-teacher .subtitle,
+.free,
+.inner__header-form .title,
+.address p:nth-child(2)::before,
+.dot-style,
+.header-nav a:hover,
+#current-page,
+.inner__header-form-fancybox .title {
+	color: $color-second;
+}
+
+.current-dot,
+.answer-top,
+.line-horizont,
+.text-img-shoes > *,
+.process__desc h2::before,
+.items-ul ul li::before {
+	background-color: $color-second;
+}
